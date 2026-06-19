@@ -184,6 +184,10 @@ code {
   padding: clamp(4rem, 8vw, 8rem) 0;
 }
 
+.hero-content > * {
+  max-width: 700px;
+}
+
 .eyebrow {
   margin: 0 0 0.85rem;
   color: var(--saffron);
@@ -720,7 +724,7 @@ fieldset input {
 
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(23, 21, 18, 0.92) 0%, rgba(23, 21, 18, 0.68) 100%),
+      linear-gradient(90deg, rgba(23, 21, 18, 0.92) 0%, rgba(23, 21, 18, 0.7) 54%, rgba(23, 21, 18, 0.22) 100%),
       linear-gradient(0deg, rgba(23, 21, 18, 0.42) 0%, rgba(23, 21, 18, 0) 45%);
   }
 
@@ -757,13 +761,21 @@ fieldset input {
     width: min(100% - 24px, 1180px);
   }
 
-  .brand small {
-    display: none;
-  }
-
   .brand-logo {
     width: 72px;
     height: 56px;
+  }
+
+  .brand {
+    gap: 0.55rem;
+  }
+
+  .brand strong {
+    font-size: 0.92rem;
+  }
+
+  .brand small {
+    font-size: 0.72rem;
   }
 
   .footer .brand-logo {
@@ -780,8 +792,26 @@ fieldset input {
     width: min(100% - 24px, 1180px);
   }
 
+  .hero-media img {
+    object-position: 62% center;
+  }
+
+  .hero-content {
+    margin-left: 12px;
+    margin-right: auto;
+    padding: 3.2rem 0;
+  }
+
+  .hero-content > * {
+    max-width: min(62vw, 360px);
+  }
+
   h1 {
-    font-size: clamp(2.65rem, 14vw, 4.5rem);
+    font-size: clamp(2.25rem, 11vw, 3.65rem);
+  }
+
+  .hero-copy {
+    font-size: 1rem;
   }
 
   .hero-actions,
