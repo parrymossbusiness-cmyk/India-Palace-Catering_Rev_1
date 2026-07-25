@@ -349,6 +349,10 @@ h3 {
   color: rgba(255, 255, 255, 0.92);
 }
 
+.hero-reviews-google {
+  flex-shrink: 0;
+}
+
 .hero-reviews-stars {
   color: var(--saffron);
   letter-spacing: 2px;
@@ -770,6 +774,23 @@ blockquote {
   line-height: 1.2;
 }
 
+.quote-panel blockquote p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.quote-panel blockquote footer {
+  margin-top: 0.7rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.quote-panel blockquote cite {
+  font-style: normal;
+}
+
 .checklist-grid {
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.52fr);
 }
@@ -1058,6 +1079,10 @@ fieldset input {
 
   .hero {
     height: clamp(560px, 90vh, 720px);
+  }
+
+  .hero-media img {
+    object-position: 22% 20%;
   }
 
   .hero-content {
