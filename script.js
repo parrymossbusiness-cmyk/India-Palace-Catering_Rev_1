@@ -1,9 +1,42 @@
 const downloadForm = document.querySelector("#download-form");
 const proposalForm = document.querySelector("#proposal-form");
+const navToggle = document.querySelector("#nav-toggle");
+const navLinks = document.querySelector("#nav-links");
 
 function trackEvent(name, detail = {}) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: name, ...detail });
+}
+
+function setNavOpen(isOpen) {
+  if (!navToggle || !navLinks) return;
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navLinks.setAttribute("data-open", String(isOpen));
+}
+
+if (navToggle && navLinks) {
+  setNavOpen(false);
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    setNavOpen(!isOpen);
+  });
+
+  navLinks.querySelectorAll("[data-nav-close]").forEach((link) => {
+    link.addEventListener("click", () => setNavOpen(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    if (!isOpen) return;
+    if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+      setNavOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setNavOpen(false);
+  });
 }
 
 if (downloadForm) {

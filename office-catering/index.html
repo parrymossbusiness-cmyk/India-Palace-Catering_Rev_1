@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="../">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bay Area Office Catering | India Palace Catering</title>
     <meta name="description" content="India Palace Catering helps Bay Area office managers plan reliable Indian catering for team lunches, all-hands, client meetings, and employee events for 30-300 people. On-time delivery, dietary labels, setup, cleanup, and one accountable contact.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://indiapalacecatering.com/office-catering/">
-    <meta property="og:title" content="Bay Area Office Catering That Makes You Look Organized">
+    <meta property="og:title" content="Office Catering That Tastes Great And Makes You Look Great Too">
     <meta property="og:description" content="Indian catering for Bay Area offices: team lunches, all-hands, client meetings, and employee events for 30-300 people.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://indiapalacecatering.com/office-catering/">
@@ -56,7 +56,28 @@
             "priceRange": "$$",
             "servesCuisine": "Indian",
             "foundingDate": "1992",
-            "description": "Bay Area Indian catering for office lunches, all-hands meetings, client meetings, employee events, and corporate celebrations."
+            "description": "Bay Area Indian catering for office lunches, all-hands meetings, client meetings, employee events, and corporate celebrations.",
+            "hasMenu": {
+              "@type": "Menu",
+              "name": "Office Catering Menu Paths",
+              "hasMenuSection": [
+                {
+                  "@type": "MenuSection",
+                  "name": "Team Lunch",
+                  "description": "Reliable buffet-style lunch for small teams, interviews, trainings, and project milestones. Fits 30 to 60 people."
+                },
+                {
+                  "@type": "MenuSection",
+                  "name": "All-Hands Buffet",
+                  "description": "A fuller spread for moments where attendance and executive visibility are higher. Fits 60 to 120 people."
+                },
+                {
+                  "@type": "MenuSection",
+                  "name": "Culture Lunch",
+                  "description": "A celebratory Indian menu for heritage events, retention moments, and cross-office gatherings. Fits 120 to 300 people."
+                }
+              ]
+            }
           },
           {
             "@type": "Service",
@@ -126,11 +147,17 @@
             <small>Catering</small>
           </span>
         </a>
-        <div class="nav-links" aria-label="Page sections">
-          <a href="#office-catering">Office Catering</a>
-          <a href="#menus">Menus</a>
-          <a href="#checklist">Checklist</a>
-          <a href="#proposal">Proposal</a>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <div class="nav-links" id="nav-links" aria-label="Page sections">
+          <a href="#proposal" data-nav-close>Free Tasting</a>
+          <a href="tel:+13103453033" data-nav-close>Call For Quote</a>
+          <a href="#gallery" data-nav-close>Gallery</a>
+          <a href="#service-area" data-nav-close>Service Area</a>
         </div>
         <a class="nav-cta" href="#proposal">Get Proposal</a>
       </nav>
@@ -139,17 +166,13 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media">
+          <!-- SWAP-IN POINT: replace with new labeled food photography when ready -->
           <img src="assets/office-catering-hero.jpg" alt="Indian office catering buffet with labeled dishes in a modern Bay Area conference room">
         </div>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">Bay Area office catering</p>
-          <h1 id="hero-title">Office catering that makes you look great.</h1>
+          <h1 id="hero-title">Office catering that tastes great and makes you look great too.</h1>
           <p class="hero-copy">Delicious Indian food for team lunches, all-hands meals, client meetings, and employee events delivered on time, clearly labeled, and handled by one accountable point of contact.</p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#proposal">Request a catering proposal</a>
-            <a class="button button-secondary" href="#checklist">Download the planning checklist</a>
-          </div>
           <dl class="proof-strip" aria-label="Service highlights">
             <div>
               <dt>Since</dt>
@@ -164,6 +187,11 @@
               <dd>Office teams</dd>
             </div>
           </dl>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-secondary" href="#proposal">Free Tasting</a>
+            <a class="button button-secondary" href="tel:+13103453033">Call For Quote</a>
+            <a class="button button-primary" href="#proposal">Request a Catering Proposal</a>
+          </div>
         </div>
       </section>
 
@@ -177,6 +205,23 @@
             <li>Milestone celebrations</li>
             <li>Recurring office meals</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section culture-section" aria-labelledby="culture-title">
+        <div class="section-inner media-split reverse">
+          <figure>
+            <img src="assets/team-lunch.jpg" alt="Office employees serving themselves Indian lunch from a catered buffet in a bright break room">
+            <figcaption>Thoughtful office meals help people feel taken care of.</figcaption>
+          </figure>
+          <div>
+            <p class="eyebrow">For People Ops and office leaders</p>
+            <h2 id="culture-title">Lunch should help the room feel taken care of.</h2>
+            <p class="lead">For an office meal, the food has to satisfy different diets, different spice comfort levels, and different expectations without making the organizer manage every bite.</p>
+            <div class="quote-panel">
+              <blockquote>“The food should be the least stressful part of your day. It should be your favorite.”</blockquote>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -280,19 +325,23 @@
         </div>
       </section>
 
-      <section class="section culture-section" aria-labelledby="culture-title">
-        <div class="section-inner media-split reverse">
-          <figure>
-            <img src="assets/team-lunch.jpg" alt="Office employees serving themselves Indian lunch from a catered buffet in a bright break room">
-            <figcaption>Thoughtful office meals help people feel taken care of.</figcaption>
-          </figure>
-          <div>
-            <p class="eyebrow">For People Ops and office leaders</p>
-            <h2 id="culture-title">Lunch should help the room feel taken care of.</h2>
-            <p class="lead">For an office meal, the food has to satisfy different diets, different spice comfort levels, and different expectations without making the organizer manage every bite.</p>
-            <div class="quote-panel">
-              <blockquote>“The food should be the least stressful part of your day. It should be your favorite.”</blockquote>
-            </div>
+      <section id="gallery" class="section gallery-section" aria-labelledby="gallery-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Food gallery</p>
+            <h2 id="gallery-title">What lands on the buffet table.</h2>
+          </div>
+          <!-- SWAP-IN POINT: replace/add <figure> tiles below as new photography arrives -->
+          <div class="gallery-grid">
+            <figure class="gallery-item gallery-item-wide">
+              <img src="assets/office-catering-hero.jpg" alt="Indian office catering buffet with labeled dishes in a modern Bay Area conference room" loading="lazy">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/dietary-labels.jpg" alt="Close-up of labeled Indian catering dishes showing dietary cards for office guests" loading="lazy">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/team-lunch.jpg" alt="Office employees serving themselves Indian lunch from a catered buffet in a bright break room" loading="lazy">
+            </figure>
           </div>
         </div>
       </section>
@@ -316,6 +365,27 @@
           <a class="checklist-preview" href="downloads/india-palace-corporate-catering-checklist.pdf" aria-label="Open corporate catering checklist PDF">
             <img src="assets/checklist-cover.png" alt="Cover page for the India Palace Corporate Catering Checklist">
           </a>
+        </div>
+      </section>
+
+      <section id="service-area" class="section service-area-section" aria-labelledby="service-area-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Delivery footprint</p>
+            <h2 id="service-area-title">Serving Bay Area offices from Alameda.</h2>
+            <p class="lead">If your office sits in or near one of these cities, we can typically deliver. Not seeing yours? Ask anyway &mdash; we cover additional locations by request.</p>
+          </div>
+          <ul class="service-area-list" aria-label="Cities served">
+            <li>San Francisco</li>
+            <li>Oakland</li>
+            <li>Alameda</li>
+            <li>Berkeley</li>
+            <li>San Jose</li>
+            <li>Palo Alto</li>
+            <li>Mountain View</li>
+            <li>Sunnyvale</li>
+            <li>Silicon Valley</li>
+          </ul>
         </div>
       </section>
 
@@ -381,7 +451,7 @@
         </div>
       </section>
 
-      <section class="section faq-section" aria-labelledby="faq-title">
+      <section id="faq" class="section faq-section" aria-labelledby="faq-title">
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow">Buyer questions</p>
@@ -429,6 +499,9 @@
         <div class="footer-links">
           <a href="#proposal">Request proposal</a>
           <a href="downloads/india-palace-corporate-catering-checklist.pdf">Download checklist</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#service-area">Service area</a>
+          <a href="blog/">Blog</a>
           <a href="#faq">FAQ</a>
         </div>
       </div>
