@@ -1087,15 +1087,27 @@ fieldset input {
   }
 
   .hero {
-    height: clamp(560px, 90vh, 720px);
+    height: auto;
+  }
+
+  .hero-media {
+    position: static;
+    height: 360px;
   }
 
   .hero-media img {
-    object-position: 68% 50%;
+    object-position: 72% 50%;
+  }
+
+  .hero-scrim {
+    display: none;
   }
 
   .hero-content {
-    padding-bottom: 2rem;
+    position: static;
+    padding: 1.6rem clamp(1rem, 5vw, 1.5rem) 2rem;
+    background: var(--paper);
+    color: var(--ink);
   }
 
   .hero-content > * {
@@ -1103,6 +1115,7 @@ fieldset input {
   }
 
   h1 {
+    color: var(--ink);
     font-size: clamp(1.9rem, 8vw, 2.5rem);
   }
 
@@ -1118,6 +1131,20 @@ fieldset input {
     font-size: 0.98rem;
     background: var(--cream);
     border-bottom: 1px solid var(--line);
+  }
+
+  .hero-reviews {
+    color: var(--muted);
+  }
+
+  .hero .button-secondary {
+    background: var(--white);
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  .hero .button-secondary:hover {
+    background: var(--cream);
   }
 
   .inline-form,
