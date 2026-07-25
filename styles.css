@@ -203,8 +203,13 @@ code {
 }
 
 .nav-cta {
-  background: var(--saffron);
-  color: var(--ink);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--white);
+}
+
+.nav-cta:hover {
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .hero {
@@ -1086,7 +1091,7 @@ fieldset input {
   }
 
   .hero-media img {
-    object-position: 82% 62%;
+    object-position: 68% 50%;
   }
 
   .hero-content {
