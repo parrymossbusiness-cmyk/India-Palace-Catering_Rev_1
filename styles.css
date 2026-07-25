@@ -145,8 +145,8 @@ code {
 }
 
 .brand-logo {
-  width: 92px;
-  height: 70px;
+  width: 108px;
+  height: 82px;
   border-radius: 8px;
   object-fit: contain;
   background: rgba(255, 255, 255, 0.94);
@@ -1047,8 +1047,8 @@ fieldset input {
   }
 
   .brand-logo {
-    width: 72px;
-    height: 56px;
+    width: 86px;
+    height: 66px;
   }
 
   .brand {
@@ -1060,7 +1060,9 @@ fieldset input {
   }
 
   .brand small {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
   }
 
   .footer .brand-logo {
@@ -1069,7 +1071,9 @@ fieldset input {
   }
 
   .nav-cta {
-    padding-inline: 0.85rem;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .hero-content,
@@ -1082,7 +1086,7 @@ fieldset input {
   }
 
   .hero-media img {
-    object-position: 22% 20%;
+    object-position: 82% 62%;
   }
 
   .hero-content {
