@@ -18,6 +18,7 @@ Primary calls to action:
 
 Site sections:
 - Homepage (https://indiapalacecatering.com/): office catering value proposition, menu paths (Team Lunch, All-Hands Buffet, Culture Lunch), food gallery, service area, checklist download, and proposal request form.
+- About (https://indiapalacecatering.com/about/): the story of India Palace Catering, its roots in India Palace restaurant (Alameda, since 1992), and Chef Kulbir Singh.
 - Blog (https://indiapalacecatering.com/blog/): practical articles on office catering planning, written for office managers and People Ops teams.
 
 Contact:

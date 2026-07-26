@@ -1434,3 +1434,27 @@ fieldset input {
     padding: 1.6rem;
   }
 }
+
+.about-body-section {
+  background: var(--paper);
+}
+
+.about-body {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: 1.06rem;
+}
+
+.about-body p {
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.about-body p:first-child {
+  margin-top: 0;
+}
+
+.about-body .hero-actions {
+  margin-top: 2rem;
+}
