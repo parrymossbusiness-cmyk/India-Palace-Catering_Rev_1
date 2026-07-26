@@ -324,41 +324,47 @@
       </section>
 
       <section id="gallery" class="section gallery-section" aria-labelledby="gallery-title">
-        <div class="section-heading section-inner gallery-heading-row">
-          <div>
-            <p class="eyebrow">Food gallery</p>
-            <h2 id="gallery-title">The Office Experience Begins At The Table.</h2>
-          </div>
+        <div class="section-heading section-inner">
+          <p class="eyebrow">Food gallery</p>
+          <h2 id="gallery-title">The Office Experience Begins At The Table.</h2>
           <span class="gallery-scroll-hint" aria-hidden="true">Scroll &#8594;</span>
         </div>
         <!-- SWAP-IN POINT: add more <figure> tiles below as new photography arrives -->
-        <div class="gallery-scroll" aria-label="Photos of catered food and service" tabindex="0">
-          <div class="gallery-spacer" aria-hidden="true"></div>
-          <figure class="gallery-item">
-            <img src="assets/gallery-mixed-curries.jpg" alt="Assorted Indian curries, saffron rice, and raita served in steel catering bowls">
-          </figure>
-          <figure class="gallery-item gallery-item-chef">
-            <img src="assets/gallery-chef-action.jpg" alt="Chef plating Chicken Malai Tikka and Fish Pakora at an outdoor catering station">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-naan.jpg" alt="Fresh naan bread sliced and served in a chafing dish with tongs">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-appetizer-shots.jpg" alt="Golgappa shot glasses with crispy puri shells, mint and tamarind chutney">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-chicken-curry.jpg" alt="Creamy chicken curry in a rich orange sauce">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-endive-bites.jpg" alt="Endive leaves filled with mango and tomato salsa, plated over lentils">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-flatbread.jpg" alt="Indian-spiced flatbread topped with paneer, cherry tomatoes, and microgreens">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery-dessert-cups.jpg" alt="Mango dessert cups topped with fresh raspberries">
-          </figure>
-          <div class="gallery-spacer" aria-hidden="true"></div>
+        <div class="gallery-wrap">
+          <button type="button" class="gallery-nav gallery-nav-prev" aria-label="Scroll gallery left" disabled>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="gallery-scroll" aria-label="Photos of catered food and service" tabindex="0">
+            <div class="gallery-spacer" aria-hidden="true"></div>
+            <figure class="gallery-item">
+              <img src="assets/gallery-mixed-curries.jpg" alt="Assorted Indian curries, saffron rice, and raita served in steel catering bowls">
+            </figure>
+            <figure class="gallery-item gallery-item-chef">
+              <img src="assets/gallery-chef-action.jpg" alt="Chef plating Chicken Malai Tikka and Fish Pakora at an outdoor catering station">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-naan.jpg" alt="Fresh naan bread sliced and served in a chafing dish with tongs">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-appetizer-shots.jpg" alt="Golgappa shot glasses with crispy puri shells, mint and tamarind chutney">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-chicken-curry.jpg" alt="Creamy chicken curry in a rich orange sauce">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-endive-bites.jpg" alt="Endive leaves filled with mango and tomato salsa, plated over lentils">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-flatbread.jpg" alt="Indian-spiced flatbread topped with paneer, cherry tomatoes, and microgreens">
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery-dessert-cups.jpg" alt="Mango dessert cups topped with fresh raspberries">
+            </figure>
+            <div class="gallery-spacer" aria-hidden="true"></div>
+          </div>
+          <button type="button" class="gallery-nav gallery-nav-next" aria-label="Scroll gallery right">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </section>
 
@@ -402,6 +408,52 @@
             <li>Sunnyvale</li>
             <li>Silicon Valley</li>
           </ul>
+        </div>
+      </section>
+
+      <section id="reviews" class="section reviews-section" aria-labelledby="reviews-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Client reviews</p>
+            <h2 id="reviews-title">What Bay Area offices are saying.</h2>
+            <div class="reviews-summary">
+              <svg class="hero-reviews-google" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true" focusable="false"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
+              <span class="reviews-summary-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>5.0 &middot; 17 reviews</span>
+            </div>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <p class="review-quote">&ldquo;Kulbirji and Sunilji (Head Chef) did an amazing job catering. They worked with me very closely to finalize the menu, patiently changed the items and added items. They took care of serving the food beautifully, ensuring it was hot and served timely. They did live catering and the execution was flawless. I cannot rave enough. Wonderful people and wonderful food. It was a fun experience planning the party with them!&rdquo;</p>
+              <div class="review-byline">
+                <span class="review-avatar" aria-hidden="true">CJ</span>
+                <span>
+                  <strong>Charu Jain</strong>
+                  <small>Client</small>
+                </span>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-quote">&ldquo;One of the best caterers in the bay area! Kulbir delivered one of the best services and menu for our reception and everyone still raves about the food to this day. Highly recommend them for catering services!&rdquo;</p>
+              <div class="review-byline">
+                <span class="review-avatar" aria-hidden="true">SS</span>
+                <span>
+                  <strong>Sahibdeep Singh</strong>
+                  <small>Client</small>
+                </span>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-quote">&ldquo;Kulbir is a wonderful person, he put us in no pressure to finalize anything and focused on understanding and supporting us to make sure our event went well. He even visited the venue beforehand to ensure that the setup on the day of the event went smoothly. The event went really well, all our guests were amazed at the quality and taste of the food- even after the event and everyone asked us for his contact. We highly recommend Kulbir.&rdquo;</p>
+              <div class="review-byline">
+                <span class="review-avatar" aria-hidden="true">AS</span>
+                <span>
+                  <strong>Aneri Shah</strong>
+                  <small>Client</small>
+                </span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 

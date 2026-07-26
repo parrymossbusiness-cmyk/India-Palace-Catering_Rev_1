@@ -112,3 +112,33 @@ if (proposalForm) {
     window.location.href = `mailto:chefkulbir@indiapalacecatering.com?subject=${subject}&body=${body}`;
   });
 }
+
+const galleryScroll = document.querySelector(".gallery-scroll");
+const galleryPrev = document.querySelector(".gallery-nav-prev");
+const galleryNext = document.querySelector(".gallery-nav-next");
+
+if (galleryScroll && galleryPrev && galleryNext) {
+  const scrollByAmount = () => {
+    const item = galleryScroll.querySelector(".gallery-item");
+    const itemWidth = item ? item.getBoundingClientRect().width : 340;
+    return (itemWidth + 16) * 2; // advance roughly two cards per click
+  };
+
+  const updateGalleryNavState = () => {
+    const maxScroll = galleryScroll.scrollWidth - galleryScroll.clientWidth;
+    galleryPrev.disabled = galleryScroll.scrollLeft <= 2;
+    galleryNext.disabled = galleryScroll.scrollLeft >= maxScroll - 2;
+  };
+
+  galleryPrev.addEventListener("click", () => {
+    galleryScroll.scrollBy({ left: -scrollByAmount(), behavior: "smooth" });
+  });
+
+  galleryNext.addEventListener("click", () => {
+    galleryScroll.scrollBy({ left: scrollByAmount(), behavior: "smooth" });
+  });
+
+  galleryScroll.addEventListener("scroll", updateGalleryNavState, { passive: true });
+  window.addEventListener("resize", updateGalleryNavState);
+  updateGalleryNavState();
+}
