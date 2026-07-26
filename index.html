@@ -153,7 +153,7 @@
           <span class="sr-only">Menu</span>
         </button>
         <div class="nav-links" id="nav-links" aria-label="Page sections">
-          <a href="#proposal" data-nav-close>Free Tasting</a>
+          <a href="#proposal" data-tasting-trigger data-nav-close>Free Tasting</a>
           <a href="tel:+13103453033" data-nav-close>Call For Quote</a>
           <a href="#gallery" data-nav-close>Gallery</a>
           <a href="#service-area" data-nav-close>Service Area</a>
@@ -175,7 +175,7 @@
           <div class="hero-cta-group">
             <div class="hero-actions" aria-label="Primary actions">
               <a class="button button-secondary" href="#proposal">Request a Quote</a>
-              <a class="button button-secondary" href="#proposal">Free Tasting</a>
+              <a class="button button-secondary" href="#proposal" data-tasting-trigger>Free Tasting</a>
               <a class="button button-secondary" href="tel:+13103453033">Call For Quote</a>
             </div>
             <div class="hero-reviews">
@@ -545,6 +545,28 @@
         </div>
       </section>
     </main>
+
+    <div class="modal-overlay" id="tasting-modal" hidden>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="tasting-modal-title">
+        <button type="button" class="modal-close" id="tasting-modal-close" aria-label="Close">&times;</button>
+        <div class="modal-body" id="tasting-modal-form-view">
+          <p class="eyebrow">Free tasting</p>
+          <h3 id="tasting-modal-title">Request a free tasting.</h3>
+          <p class="modal-copy">Tell us who to follow up with and we'll be in touch to set it up.</p>
+          <form id="tasting-form">
+            <label for="tasting-company">Company name<input id="tasting-company" name="company" autocomplete="organization" required></label>
+            <label for="tasting-email">Work email<input id="tasting-email" name="email" type="email" autocomplete="email" required></label>
+            <button class="button button-primary full-width" type="submit">Request free tasting</button>
+          </form>
+        </div>
+        <div class="modal-body" id="tasting-modal-confirm-view" hidden>
+          <p class="eyebrow">Request received</p>
+          <h3>We'll follow up shortly.</h3>
+          <p class="modal-copy">Free tastings are limited and offered on a first-come, first-served basis &mdash; we'll reach out soon to get yours scheduled.</p>
+          <button type="button" class="button button-secondary full-width" id="tasting-modal-done">Done</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="section-inner footer-grid">

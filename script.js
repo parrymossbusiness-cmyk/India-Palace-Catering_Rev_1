@@ -142,3 +142,71 @@ if (galleryScroll && galleryPrev && galleryNext) {
   window.addEventListener("resize", updateGalleryNavState);
   updateGalleryNavState();
 }
+
+const tastingModal = document.querySelector("#tasting-modal");
+const tastingTriggers = document.querySelectorAll("[data-tasting-trigger]");
+const tastingClose = document.querySelector("#tasting-modal-close");
+const tastingForm = document.querySelector("#tasting-form");
+const tastingFormView = document.querySelector("#tasting-modal-form-view");
+const tastingConfirmView = document.querySelector("#tasting-modal-confirm-view");
+const tastingDone = document.querySelector("#tasting-modal-done");
+
+if (tastingModal && tastingTriggers.length) {
+  const openTastingModal = (event) => {
+    event.preventDefault();
+    tastingFormView.hidden = false;
+    tastingConfirmView.hidden = true;
+    tastingModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    const firstField = document.querySelector("#tasting-company");
+    if (firstField) firstField.focus();
+  };
+
+  const closeTastingModal = () => {
+    tastingModal.hidden = true;
+    document.body.style.overflow = "";
+  };
+
+  tastingTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", openTastingModal);
+  });
+
+  tastingClose.addEventListener("click", closeTastingModal);
+  tastingDone.addEventListener("click", closeTastingModal);
+
+  tastingModal.addEventListener("click", (event) => {
+    if (event.target === tastingModal) closeTastingModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !tastingModal.hidden) closeTastingModal();
+  });
+
+  if (tastingForm) {
+    tastingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(tastingForm);
+      const company = formData.get("company") || "";
+      const email = formData.get("email") || "";
+
+      trackEvent("free_tasting_request", { company });
+
+      const subject = encodeURIComponent("Free tasting request");
+      const body = encodeURIComponent(
+        [
+          "New free tasting request",
+          "",
+          `Company: ${company}`,
+          `Work email: ${email}`
+        ].join("\n")
+      );
+      const mailLink = document.createElement("a");
+      mailLink.href = `mailto:chefkulbir@indiapalacecatering.com?subject=${subject}&body=${body}`;
+      mailLink.click();
+
+      tastingFormView.hidden = true;
+      tastingConfirmView.hidden = false;
+    });
+  }
+}

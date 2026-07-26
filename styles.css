@@ -1325,3 +1325,99 @@ fieldset input {
     height: 240px;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(23, 21, 18, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-panel {
+  position: relative;
+  width: min(440px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: var(--cream);
+}
+
+.modal-body h3 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+}
+
+.modal-copy {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+#tasting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+#tasting-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+#tasting-form input {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--white);
+}
+
+#tasting-form input:focus {
+  outline: 2px solid var(--saffron);
+  outline-offset: 1px;
+}
+
+#tasting-form button {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 620px) {
+  .modal-panel {
+    padding: 1.6rem;
+  }
+}
