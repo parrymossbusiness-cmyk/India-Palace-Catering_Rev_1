@@ -214,7 +214,7 @@ code {
 
 .hero {
   position: relative;
-  height: clamp(560px, 84vh, 800px);
+  height: clamp(640px, 84vh, 800px);
   overflow: hidden;
   color: var(--white);
 }
@@ -253,6 +253,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding-bottom: clamp(2.4rem, 6vw, 4rem);
@@ -287,8 +288,8 @@ h2 {
 }
 
 h1 {
-  max-width: 780px;
-  font-size: clamp(2.2rem, 4.4vw, 3.7rem);
+  max-width: 920px;
+  font-size: clamp(2rem, 3.6vw, 3rem);
 }
 
 h2 {
