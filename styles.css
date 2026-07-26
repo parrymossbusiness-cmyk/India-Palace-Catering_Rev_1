@@ -1076,9 +1076,7 @@ fieldset input {
   }
 
   .nav-cta {
-    padding: 0.55rem 0.65rem;
-    font-size: 0.78rem;
-    white-space: nowrap;
+    display: none;
   }
 
   .hero-content,
@@ -1113,7 +1111,7 @@ fieldset input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem clamp(1rem, 5vw, 1.5rem) 1.5rem;
+    padding: 131px clamp(1rem, 5vw, 1.5rem) 1.5rem;
   }
 
   .hero-content > * {
