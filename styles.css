@@ -1439,8 +1439,28 @@ fieldset input {
   background: var(--paper);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 2.6rem;
+  align-items: start;
+}
+
+.about-photo {
+  margin: 0;
+  position: sticky;
+  top: 110px;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .about-body {
-  max-width: 760px;
+  max-width: 640px;
   color: var(--ink);
   font-size: 1.06rem;
 }
@@ -1457,4 +1477,16 @@ fieldset input {
 
 .about-body .hero-actions {
   margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    position: static;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
