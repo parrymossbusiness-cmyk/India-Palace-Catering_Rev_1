@@ -1198,8 +1198,8 @@ fieldset input {
   }
 
   .brand-logo {
-    width: 86px;
-    height: 66px;
+    width: 104px;
+    height: 80px;
   }
 
   .brand {
@@ -1266,8 +1266,8 @@ fieldset input {
 
   .hero-content h1 {
     color: var(--white);
-    font-size: 1.42rem;
-    max-width: 240px;
+    font-size: 1.85rem;
+    max-width: 290px;
     text-align: left;
   }
 

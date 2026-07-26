@@ -158,7 +158,7 @@ if (tastingModal && tastingTriggers.length) {
     tastingConfirmView.hidden = true;
     tastingModal.hidden = false;
     document.body.style.overflow = "hidden";
-    const firstField = document.querySelector("#tasting-company");
+    const firstField = document.querySelector("#tasting-name");
     if (firstField) firstField.focus();
   };
 
@@ -187,16 +187,18 @@ if (tastingModal && tastingTriggers.length) {
       event.preventDefault();
 
       const formData = new FormData(tastingForm);
+      const name = formData.get("name") || "";
       const company = formData.get("company") || "";
       const email = formData.get("email") || "";
 
-      trackEvent("free_tasting_request", { company });
+      trackEvent("free_tasting_request", { name, company });
 
       const subject = encodeURIComponent("Free tasting request");
       const body = encodeURIComponent(
         [
           "New free tasting request",
           "",
+          `Name: ${name}`,
           `Company: ${company}`,
           `Work email: ${email}`
         ].join("\n")
