@@ -313,6 +313,10 @@ h3 {
   display: none;
 }
 
+.cta-label--mobile {
+  display: none;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1283,6 +1287,14 @@ fieldset input {
     font-size: 0.98rem;
     background: var(--cream);
     border-bottom: 1px solid var(--line);
+  }
+
+  .cta-label--desktop {
+    display: none;
+  }
+
+  .cta-label--mobile {
+    display: inline;
   }
 
   .hero-cta-group {
